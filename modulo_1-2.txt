@@ -1,0 +1,296 @@
+CARACTERES ESPECIAIS 
+são chamados de html entities
+para quando queros que apareça no site os <> temos que fazer assim -> &lt;br&gt;
+alguns símbolos especiais:
+        &reg;
+        &copy;
+        &trade;
+        &euro;
+        &pound;
+        &yen;
+        &cent;
+        &Delta;
+        &uarr;
+        &rarr;
+        &darr;
+        &larr;
+
+EMOJIS
+temos que ir ao site emojipedia.org e porcurar a referencia que vaia aparecer assim U+1F496 temos no nosso codigo temos que começar com &#x e depois acrescentar o que esta a frenre do + por exemplo
+codigo do emoji é este 
+U+1F496
+ficaria assim no codigo:
+        &#x1F496;
+site emojis: emojipedia.org
+
+Imagens no Gimp
+-ir a barra de ferramentas carregar em ->image e depois em ->scale image para redimencionar
+-full image maximo 1500 largura e carregar tab
+-resoluçao 72/50 é bom
+para guardar
+-barra de ferramentas file exportar alteramos onome 70 de qualidade
+img->ctrl+esp
+
+ICONES DE FAVORITOS
+Procurar icones: https://www.iconarchive.com/
+Converter em icon: https://favicon.io/
+
+Formatação 
+strong - negrito
+em -italico
+
+
+Nota:
+selecionar para meter tag:
+ctrl+schfit+p -> qualquer tag
+
+
+Para dimencionar imagens
+<picture>
+        source:media:type
+</picture>
+site imagens: https://www.pexels.com/
+
+
+Para Audio
+<audio preload="metadata" autoplay controls>
+        (source:src)
+	<source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+	(tres formatos)
+	<p>Infelizmente seu navegador não consegues reproduzir áudio. <a href="midia/guanacast-33.mp3"> Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+
+Para Video
+    <video width="500" poster="imagens/limoes-capa.png" controls>
+	(source:src)
+        <source src="midia/meu-video.mp4" type="video/mp4">
+        <source src="midia/meu-video.m4v" type="video/m4v">
+        <source src="midia/meu-video.webm" type="video/webm">
+        <source src="midia/meu-video.ogv" type="video/ogv">
+        <p>Infelizmente seu navegador não consegues reproduzir videos.</p>
+    </video>
+
+Trabalhar no css
+criar pasta .css po exemplo: style.css
+tem que começar com: @charset "UTF-8";
+
+Ver paletes de cores
+sites:
+color.adobe.com
+paletton.com (o que mais gostei da para ver exemplos em sites)
+*{
+	height: 100%
+}(isto são configurações globais)
+
+
+Defenir letras e tamanhos
+font-family:
+font-size:
+para medida de fonte é recomendado usar (em) ou (px) ->16px tamanho normal
+16px geralmente = 1em
+em(percetagem do tamanho real)
+	weigth - peso
+	width - largura
+        height - altura
+font-weigth: 
+lighter - mais magrinho
+normal - normal
+bold - bem escura
+bolder - o mais escuro que ha
+variação numerica vais de 100 ate 900
+font-style:
+italico
+normal
+text-decoration: 
+underline - sublinhado
+/*
+shorthand font
+            -font_style -> font_weigth -> font_size -> font_family
+*/
+exemplo
+font: italic bolder 3em 'Work Sans', sans-serif;
+
+sites fontes
+https://fonts.google.com
+escolher a fonte
+ir a @import e copiar e colar no nosso codigo
+https://www.dafont.com/
+escolher a fonte
+fazer downloads deszipar e meter numa pasta
+exemplo:
+ @font-face {
+            font-family: 'Filxgirl'; (nome que lhe queremos dar)
+            src: url('fonts/Filxgirl.TTF') format('truetype'); 
+            font-weight: normal;
+            font-style: normal;
+            /*
+            Tipos de format()
+            - opentype (otf)
+            - truetype (ttf)
+            - embedde-opentype
+            - truetype-aat (Apple Advaced Typography)
+            - svg
+            */
+        }
+depois é so chamar
+font-family: 'Filxgirl';
+
+
+Procurar fontes em imagem
+https://www.whatfontis.com/ (melhor maneira)
+https://www.fontsquirrel.com/
+https://www.myfonts.com/
+
+
+
+Seletores
+/*
+    em HTML é id               = em CSS é #
+    em HTML é class            = em CSS é .
+    em HTML é pseudo-class     = em CSS é :
+    em HTML é pseudo-element   = em CSS é :: 
+    em HTML é children         = em CSS é >
+
+*/
+id - indentificar elementos (um id só pode ter um elemento)
+class - classificar elementos (varios elementos podem ter a mesma class)
+
+
+Pseudo-classes
+a:houver (quando passar por cima)
+a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+a:active (quando esta a ser clicado)
+exemplo:
+a:active {
+            color: yellow;
+        }
+a:visited (quando já foi visitada) 
+exemplo: 
+a:visited {
+            color: darkred;
+        }
+div > p (o p dentro do div)
+div:hover > p (quando passar por cima do p dentro do div)
+exemplo:
+ div > p {
+            display: none;
+        }
+(mantem o p de div escondido)
+div:hover > p {
+            display: block;
+            color: white;
+            background-color: red;
+            width: 300px;
+        }
+(quando passar o rato por cima mostra o p)
+
+
+Pseudo-elementos
+a::before (consigo que coisas apareção antes)
+exemplo:
+ a::before {
+            content: '→ ';
+        }
+a::after (consigo que coisas apareção depois)
+exemplo:
+a::after {
+            content: ' ←';
+        }
+
+
+NOTAS:
+Vamos falar sobre box
+heigth - altura
+width - largura
+border - borda (dentro do elemento)
+padding - é o preenchimento entre o conteudo e o border
+margin - é o espaço por fora do border
+outline - linha por fora do border (fora do elemento)
+
+TIPOS de BOX
+box-level: 
+(<div></div>) e todos os que precisao de quebra de linha
+-> sempre se inicia numa linha nova
+-> ocupa a width inteira
+-> e para continuar o conteudo salta uma linha
+inline-level: 
+(<span></span>) e todos os que não precisao de quebra de linha
+-> a box inicia se na mesma linha do conteudo
+-> não ocupa a width toda
+-> conteudo continua mal a box acaba
+Exemplo:
+h1 {
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+
+            /*border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray;*/
+
+            border: 10px solid darkslategray;
+
+            /*padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;*/
+	    
+            padding: 10px 10px 10px 10px;
+
+            /*margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-left: 20px;*/
+
+            margin: 20px 20px 40px 20px;
+
+            /*outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;*/
+            
+            outline: 5px dashed salmon;
+        }
+padding: 10px (todos os varores ficam iguais)
+padding: 10px 20px (o primeiro valor é para cima e baixo o segundo é direita esquerda)
+padding: 20px auto 40px auto (centraliza a direita e a esquerda)
+margin: auto; (para alinhar ao centro)
+
+SOMBRAS
+box-shadow: 1px 1px 1px black;
+1- deslocamento horizontal
+2- deslocamento vertical
+3- espalhamento da sombra
+exemplo bom:
+box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
+border-radius: ***px; (arredonda bordas)
+
+criar nossa borda:
+ir ao gimp 
+fazer uma borda ver ex021 box03
+exemplo:
+ 	    h1 {
+            border: 20px solid transparent;
+            padding: 10px;
+            border-image-source: url('borda.png');
+            border-image-slice: 27;
+            border-image-repeat: repeat;
+		(short)
+            /*border-image: url('borda.png') 27 repeat;*/
+        }
+
+mockflow.com (panegar estrutura)
+transition-duration: 0.5s;(demora 0.5 seg a passar)
+
+configuração de paragrafo
+main p {
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+}
