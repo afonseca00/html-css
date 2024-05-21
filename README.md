@@ -1,2 +1,4 @@
 # html-css
- Curso de HTML% e CSS3
+ Curso de HTML5 e CSS3
+
+ Estou a aprender a criar sites e agora vou gerir os meus repositórios!
