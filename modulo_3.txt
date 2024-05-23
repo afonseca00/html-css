@@ -77,3 +77,26 @@ pode ser (left, right, center)
 
 vertical-align: middle; /*Alinhamento vertical*/
 pode ser (top, bottom, middle)
+
+PARA FAZER EFEITO ZEBRADO
+tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+<!--
+Pode ser
+:nth-child(2n) -> é dois em dois/ pares
+:nth-child(even) -> pares
+:nth-child(2n - 1) -> impares
+:nth-child(odd) -> impares
+-->
+
+CABEÇALHO DESLIZANTE NA TABELA
+temos que tornar a posição da tabela relativa:
+position: relative;
+temos que dizer que o th do tr do thead tem posição sticky temos que meter top -1 para estar encostado la em cima e meter a mesma cor do cabeçalho 
+exemplo
+thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
