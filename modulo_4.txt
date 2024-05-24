@@ -1,0 +1,12 @@
+IFRAME
+exemplo:
+<iframe src="https://gustavoguanabara.github.io" frameborder="0"><a href="https://gustavoguanabara.github.io" target="_blank"> No github</a></iframe>
+<!--Tamanho padrão 300x150-->
+css:
+<style>
+        iframe {
+            width: 500px;
+            height: 500px;
+	    border: 1px solid black;
+        }
+    </style>
