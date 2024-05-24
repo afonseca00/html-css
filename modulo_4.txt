@@ -14,10 +14,10 @@ css:
 
 ESCOLHER QUE PAGINA CARREGA NA IFRAME
 fazemos uma lista clicavel
-<ul>
-        <li><a href="paginas-extras/pagina001.html" target="frame">Primeira página</a></li>
-        <li><a href="#">Segunda página</a></li>
-        <li><a href="#">Terceira página</a></li>
+ <ul>
+        <li><a href="paginas-extra/pagina001.html" target="frame">Primeira página</a></li>
+        <li><a href="paginas-extra/pagina002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extra/pagina003.html" target="frame">Terceira página</a></li>
     </ul>
 
 e damos um nome ao iframe
@@ -28,3 +28,22 @@ e damos um nome ao iframe
 PARA METER ALGO NO IFRAME INICIAL
 srcdoc="" -> para escrever html la dentro
 <iframe id="ecra" name="frame" srcdoc="<h1>Escolha uma das opções a cima</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In tempore rem non soluta culpa explicabo. Deleniti architecto aperiam quidem, fuga nam illo eveniet, unde, adipisci rerum aliquid provident explicabo eum!</p> <img src='imagens/android-chrome-192x192.png'>">
+
+
+TORNAR IFRAME MAIS SEGURO
+sandbox="sandbox" -> bloqueia todo e qualquer acesso que outros sites que estejam dentro de iframe tentem fazer com por exemplo um cadastro
+referrerpolicy="no-referrer" -> não vai guardar nenhuma informação do usuario
+exemplo:
+<iframe src="paginas-extra/pagina004.html" sandbox="sandbox" referrerpolicy="no-referrer">
+        Seu navegador não é compatível com isso...
+    </iframe>
+
+Quando precisamos que funcione o formulário
+sandbox="allow-same-origin allow-forms allow-scripts"
+allow-same-origin -> aceita coisas da mesma origem
+allow-forms ->	aceita formulários
+allow-scripts -> aceita scripts
+exemplo:
+ <iframe src="paginas-extra/pagina004.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
+        Seu navegador não é compatível com isso...
+    </iframe>
