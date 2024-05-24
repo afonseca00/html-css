@@ -110,3 +110,5 @@ caption {
             font-weight: bolder;
             padding: 8px;
         }
+
+PERSONALIZAÇÃO DE COLUNAS (ex023 tabela005)
