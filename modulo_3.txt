@@ -100,3 +100,13 @@ thead > tr > th {
             top: -1px;
             background-color: #383838;
         }
+
+CAPTION (titulo da tabela)
+html:
+<caption>Cadastro</caption>
+css:
+caption {
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 8px;
+        }
