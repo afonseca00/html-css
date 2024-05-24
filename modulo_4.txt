@@ -10,3 +10,21 @@ css:
 	    border: 1px solid black;
         }
     </style>
+
+
+ESCOLHER QUE PAGINA CARREGA NA IFRAME
+fazemos uma lista clicavel
+<ul>
+        <li><a href="paginas-extras/pagina001.html" target="frame">Primeira página</a></li>
+        <li><a href="#">Segunda página</a></li>
+        <li><a href="#">Terceira página</a></li>
+    </ul>
+
+e damos um nome ao iframe
+<iframe id="ecra" name="frame" src="">
+        <p>Infelizmente seu navegador não é compatível com isto!</p>
+    </iframe>
+
+PARA METER ALGO NO IFRAME INICIAL
+srcdoc="" -> para escrever html la dentro
+<iframe id="ecra" name="frame" srcdoc="<h1>Escolha uma das opções a cima</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In tempore rem non soluta culpa explicabo. Deleniti architecto aperiam quidem, fuga nam illo eveniet, unde, adipisci rerum aliquid provident explicabo eum!</p> <img src='imagens/android-chrome-192x192.png'>">
