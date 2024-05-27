@@ -171,3 +171,8 @@ EXEMPLO:
             <input type="checkbox" name="desten" id="idesten">
             <label for="idesten">Tênis</label> <br>
 </fieldset>
+
+input:range (medir o nivel)
+input:color (meter uma cor)
+input:file  (para enviar fotografia)
+- quando usarmos este tipo file tem que ser post
