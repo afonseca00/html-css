@@ -47,3 +47,36 @@ exemplo:
  <iframe src="paginas-extra/pagina004.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
         Seu navegador não é compatível com isso...
     </iframe>
+
+
+
+FORMULÁRIOS
+- para criar um formulario basico temos que começar com <form> e acabar </form>
+- abrimos um <p> e metemos o nome e para ter a box para escrevermos metemos input:text
+- para termos o botão para enviar metemos input:submit
+- se o autocomplete estiver a chatear podemos acrescentar ao <from> o autocomplete="off" e fica assim <form autocomplete="off">
+- para enviar os dados temos que acrescenatar o action="cadastro.php" ao form
+EXEMPLO:
+<form action="cadastro.php" autocomplete="off">
+        <p>Nome: 
+            <input type="text" name="nome" id="nome"></p>
+        <p>Apelido: 
+            <input type="text" name="apelido" id="apelido"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+
+-para relacionar o Nome a sua caixa precisamos de envelopara o Nome: para <label for="inome">Nome:</label> e meter lhe o nome do id do input (caixa)
+- existem dois tipos de metodos get(padrão) e post 
+- get aparece o que escrevemos na url
+- post não aparece
+- usar get quando dados não forem senciveis (ate 3000bits)
+- usar post em campos sensiveis (se passar de 3000bits) e ficheiros
+EXEMPLO:
+<form method="post" action="cadastro.php" autocomplete="off">
+        <p><label for="inome">Nome:</label> 
+            <input type="text" name="nome" id="inome"></p>
+        <p><label for="iapelido">Apelido:</label> 
+            <input type="text" name="apelido" id="iapelido"></p>
+        <p><input type="submit" value="Enviar"></p>
+</form>
+
