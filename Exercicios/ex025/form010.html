@@ -7,20 +7,26 @@
     <title>Formulário</title>
 </head>
 <body>
-    <h1>Teste de Formulário</h1>
+    <h1>Exemplo de formulário</h1>
     <form action="registro.php" method="get" autocomplete="on">
         <p>
-            <label for="iuti">Utilizador: </label>
-            <input type="text" name="uti" id="iuti" required minlength="5" maxlength="15" size="10" placeholder="Nome" autocomplete="username">
+            <label for="iano">Em que ano nasceu? </label>
+            <input type="number" name="ano" id="iano" min="1900" max="2024" oninput="calcIdade()">
         </p>
         <p>
-            <label for="ipass">Password: </label>
-            <input type="password" name="pass" id="ipass" required minlength="8" maxlength="20" placeholder="Min 8 letras" autocomplete="current-password">
+            <label for="iidade">A sua idade é: </label>
+            <output id="iidade" >0</output>
         </p>
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
         </p>
+        <script>
+            function calcIdade() {
+                let atual = new Date().getFullYear()
+                iidade.innerHTML = Number(atual) - Number(iano.value)
+            }
+        </script>
     </form>
 </body>
-</html> 
+</html>

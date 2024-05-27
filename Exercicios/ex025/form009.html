@@ -7,15 +7,12 @@
     <title>Formulário</title>
 </head>
 <body>
-    <h1>Teste de Formulário</h1>
+    <h1>Exemplo de formulário</h1>
     <form action="registro.php" method="get" autocomplete="on">
         <p>
-            <label for="iuti">Utilizador: </label>
-            <input type="text" name="uti" id="iuti" required minlength="5" maxlength="15" size="10" placeholder="Nome" autocomplete="username">
-        </p>
-        <p>
-            <label for="ipass">Password: </label>
-            <input type="password" name="pass" id="ipass" required minlength="8" maxlength="20" placeholder="Min 8 letras" autocomplete="current-password">
+            <label for="inum">Número: </label>
+            <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+            <output id="ival">5</output>
         </p>
         <p>
             <input type="submit" value="Enviar">
@@ -23,4 +20,4 @@
         </p>
     </form>
 </body>
-</html> 
+</html>
