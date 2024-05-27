@@ -145,3 +145,29 @@ Agurpar
 Para dar padrão ao telmove, email etc...
 ir pesquisar html5 *** padrao
 começa por pattern="xxx"
+
+Todo o botão de radio(questão de sexo)
+-quando so posso escolher um tenho que usar o mesmo name
+EXEMPLO:
+<fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmas" value="M">
+            <label for="isxmas">Masculino</label>
+            <input type="radio" name="sexo" id="isxfem" value="F">
+            <label for="isxfem">Feminino</label>
+        </fieldset>
+
+check box
+- posso deixar ja selecionados com "checked"
+EXEMPLO:
+<fieldset>
+            <legend>Desportos favoritos</legend>
+            <input type="checkbox" name="desbas" id="idesbas"> 
+            <label for="idesbas">Basquete</label> <br>
+            <input type="checkbox" name="desfut" id="idesfut">
+            <label for="idesfut">Futebol</label> <br>
+            <input type="checkbox" name="desnat" id="idesnat">
+            <label for="idesnat">Natação</label> <br>
+            <input type="checkbox" name="desten" id="idesten">
+            <label for="idesten">Tênis</label> <br>
+</fieldset>
