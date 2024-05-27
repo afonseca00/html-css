@@ -132,5 +132,16 @@ EXEMPLO:
         </p>
     </form>
 
+Agurpar
+<form>
+<fieldset>
+            <legend>Dados pessoais</legend>
+		***
+		***
+</fieldset>
+</form>
 
 
+Para dar padrão ao telmove, email etc...
+ir pesquisar html5 *** padrao
+começa por pattern="xxx"
