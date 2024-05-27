@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="registro.php" method="post" autocomplete="on">
+        <p>
+            <label for="icid">Cidade</label>
+            <select name="cidade" id="icid">
+                <option value="" selected>---- Escolha ----</option>
+                <optgroup label="Norte">
+                    <option value="Por">Porto</option>
+                    <option value="Bra">Braga</option>
+                </optgroup>
+                <optgroup label="Centro">
+                    <option value="San">Santarém</option>
+                    <option value="CB">Castelo Branco</option>
+                </optgroup>
+                <optgroup label="Sul">
+                    <option value="Lis">Lisboa</option>
+                    <option value="Al">Algarve</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="ADM">Administrador</option>
+                <option value="Cont">Contabilista</option>
+                <option value="Dev">Desenvolvedor</option>
+                <option value="Prof">Professor</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="imsg">Mensagem: </label>
+            <textarea name="mas" id="imsg" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+</body>
+</html>
