@@ -186,3 +186,13 @@ temos que fazer chamadas de media queries
     <link rel="stylesheet" href="estilos/ecra.css" media="screen">
     <link rel="stylesheet" href="estilos/impressora.css" media="print">
 (dois pricipais media types)
+
+Quando queros criar para um dispositivo deitado e em pe
+EXEMPLO:
+    <title>Media Query</title>
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/empe.css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet" href="estilos/deitado.css" media="screen and (orientation: landscape)">
+
+
+
